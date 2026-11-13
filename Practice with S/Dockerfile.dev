@@ -1,0 +1,11 @@
+From node:22-alpine
+
+WORKDIR /.app
+
+COPY package*.json ./
+
+RUN npm install 
+
+Expose 3000
+
+Cmd ["npm", "run", "dev"]
